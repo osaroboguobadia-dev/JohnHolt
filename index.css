@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-heading: 'Fraunces', serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-label: 'Manrope', sans-serif;
+
+  /* background - warm off-white paper */
+  --background-50: 0.985 0.006 70;
+  --background-100: 0.97 0.008 70;
+  --background-200: 0.93 0.012 70;
+  --background-300: 0.86 0.015 65;
+  --background-400: 0.75 0.02 60;
+  --background-500: 0.62 0.02 55;
+  --background-600: 0.50 0.02 50;
+  --background-700: 0.38 0.02 45;
+  --background-800: 0.27 0.02 40;
+  --background-900: 0.17 0.015 35;
+  --background-950: 0.10 0.01 30;
+
+  /* primary - John Holt heritage red */
+  --primary-50: 0.97 0.015 27;
+  --primary-100: 0.93 0.04 27;
+  --primary-200: 0.86 0.08 27;
+  --primary-300: 0.78 0.13 27;
+  --primary-400: 0.68 0.19 27;
+  --primary-500: 0.56 0.22 28;
+  --primary-600: 0.48 0.20 28;
+  --primary-700: 0.40 0.17 28;
+  --primary-800: 0.32 0.14 28;
+  --primary-900: 0.25 0.10 28;
+  --primary-950: 0.18 0.07 28;
+
+  /* accent - bold fire-safety gold */
+  --accent-50: 0.98 0.02 92;
+  --accent-100: 0.95 0.05 92;
+  --accent-200: 0.90 0.09 91;
+  --accent-300: 0.85 0.14 90;
+  --accent-400: 0.80 0.17 88;
+  --accent-500: 0.75 0.17 85;
+  --accent-600: 0.66 0.15 82;
+  --accent-700: 0.55 0.13 78;
+  --accent-800: 0.44 0.11 74;
+  --accent-900: 0.34 0.09 70;
+  --accent-950: 0.24 0.07 66;
+
+  /* secondary - muted warm graphite */
+  --secondary-50: 0.97 0.003 60;
+  --secondary-100: 0.93 0.004 60;
+  --secondary-200: 0.86 0.005 60;
+  --secondary-300: 0.74 0.006 58;
+  --secondary-400: 0.61 0.007 58;
+  --secondary-500: 0.49 0.008 55;
+  --secondary-600: 0.40 0.008 55;
+  --secondary-700: 0.31 0.008 55;
+  --secondary-800: 0.23 0.007 55;
+  --secondary-900: 0.16 0.005 55;
+  --secondary-950: 0.10 0.004 55;
+
+  /* foreground */
+  --foreground-50: 0.97 0.004 70;
+  --foreground-100: 0.92 0.005 70;
+  --foreground-200: 0.82 0.006 70;
+  --foreground-300: 0.68 0.007 70;
+  --foreground-400: 0.54 0.008 70;
+  --foreground-500: 0.42 0.008 70;
+  --foreground-600: 0.33 0.007 70;
+  --foreground-700: 0.24 0.006 70;
+  --foreground-800: 0.16 0.005 70;
+  --foreground-900: 0.10 0.004 70;
+  --foreground-950: 0.05 0.003 70;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hp-field {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  left: -9999px;
+  opacity: 0;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
