@@ -31,8 +31,20 @@
     "noFallthroughCasesInSwitch": false,
     "noUncheckedSideEffectImports": false,
     "paths": {
-      "@/*": ["./src/*"],
+      "@/*": ["./*"],
     }
   },
-  "include": ["src", "vite-env.d.ts"]
+  "include": [
+    "App.tsx",
+    "components",
+    "hooks",
+    "i18n",
+    "lib",
+    "mocks",
+    "pages",
+    "router",
+    "main.tsx",
+    "auto-imports.d.ts",
+    "vite-env.d.ts"
+  ]
 }
